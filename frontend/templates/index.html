@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        min-height: 100vh;
+        background-color: #ffecb3;
+        font-family: "Aria", sans-serif;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 36px;
+        color: #ff8f00;
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        width: 400px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: #ff8f00;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 2px solid #ffb74d; /* Amber border */
+        border-radius: 6px;
+        background-color: #fff3e0; /* Light amber background for inputs */
+        color: #333;
+        font-size: 14px;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background-color: #ff8f00;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #ff6f00;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Submit Your Information</h1>
+
+    <form id="dataForm" action="http://localhost:9000/submit" method="POST">
+      <label for="name">Name : </label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email : </label>
+      <input type="email" name="email" id="email" /><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
