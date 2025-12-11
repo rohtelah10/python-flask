@@ -16,9 +16,9 @@ collection = db["Assignment"]
 def submit():
     try:
         name = request.form.get("name")
-        email = request.form.get("email")
+        description = request.form.get("description")
         
-        collection.insert_one({"name": name, "email": email})
+        collection.insert_one({"name": name, "description": description})
         
         return jsonify({"message" : "Data submitted successfully"}), 200
     
