@@ -68,11 +68,11 @@
     <h1>Submit Your Information</h1>
 
     <form id="dataForm" action="http://localhost:9000/submit" method="POST">
-      <label for="name">Name : </label>
+      <label for="name">ToDo Name : </label>
       <input type="text" id="name" name="name" required /><br /><br />
 
-      <label for="email">Email : </label>
-      <input type="email" name="email" id="email" /><br /><br />
+      <label for="email">ToDo Description : </label>
+      <textarea name="description" id="description" rows="4" cols="50"> </textarea><br /><br />
 
       <button type="submit">Submit</button>
     </form>
